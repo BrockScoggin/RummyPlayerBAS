@@ -19,8 +19,8 @@ Revision History
 
 # TODO - Change the PORT and USER_NAME Values before running
 DEBUG = True
-PORT = 8002
-USER_NAME = "jsmith"
+PORT = 11222
+USER_NAME = "bas2112"
 # TODO - change your method of saving information from the very rudimentary method here
 hand = [] # list of cards in our hand
 discard = [] # list of cards organized as a stack
@@ -28,6 +28,8 @@ cannot_discard = ""
 
 # set up the FastAPI application
 app = FastAPI()
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
 
 # set up the API endpoints
 @app.get("/")
